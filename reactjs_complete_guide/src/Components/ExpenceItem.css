@@ -23,6 +23,7 @@
     justify-content: space-between;
 }
 .expence-item__description h2{
+    
     margin: 0;
 }
 .expence-item__price{
