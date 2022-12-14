@@ -11,6 +11,15 @@
     margin: 11px 0;
 
 }
+.expence-item__date__item{
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    background: #201c1c;
+    padding: 7px;
+    border: 2px solid #fff;
+}
 .expence-item__date{
     width: 15%;
     float: left;
