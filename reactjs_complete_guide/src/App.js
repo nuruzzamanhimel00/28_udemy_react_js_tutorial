@@ -1,6 +1,7 @@
 
 
 import ExpenceItem from './Components/ExpenceItem.js'
+import './Components/ExpenceItem.css'
 
 function App() {
 
@@ -40,26 +41,29 @@ function App() {
   return (
     <div className="App">
       <h1>Lets Start</h1>
-      <ExpenceItem 
-      title={expences[0].title} 
-      amount={expences[0].amount}
-      date={expences[0].date}>
-      </ExpenceItem>
-      <ExpenceItem 
-      title={expences[1].title} 
-      amount={expences[1].amount}
-      date={expences[1].date}>
-      </ExpenceItem>
-      <ExpenceItem 
-      title={expences[2].title} 
-      amount={expences[2].amount}
-      date={expences[2].date}>
-      </ExpenceItem>
-      <ExpenceItem 
-      title={expences[3].title} 
-      amount={expences[3].amount}
-      date={expences[3].date}>
-      </ExpenceItem>
+      <div className='expence_item_main'>
+        <ExpenceItem 
+        title={expences[0].title} 
+        amount={expences[0].amount}
+        date={expences[0].date}/>
+        
+        <ExpenceItem 
+        title={expences[1].title} 
+        amount={expences[1].amount}
+        date={expences[1].date}/>
+        
+        <ExpenceItem 
+        title={expences[2].title} 
+        amount={expences[2].amount}
+        date={expences[2].date}/>
+        
+        <ExpenceItem 
+        title={expences[3].title} 
+        amount={expences[3].amount}
+        date={expences[3].date}/>
+        
+      </div>
+     
     
     </div>
   );

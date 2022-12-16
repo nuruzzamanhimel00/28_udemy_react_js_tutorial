@@ -1,15 +1,27 @@
 .expence-item{
     overflow: hidden;
     background: #ddd;
-    padding: 15px;
+    padding: 5px;
     border: 1px solie #ddd;
     border-radius: 15px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    margin: 11px 0;
+    margin: 4px 0;
 
+}
+.expence_item_main{
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    background: #000;
+    padding: 2px 10px;
+    border-radius: 7px;
 }
 .expence-item__date__item{
     width: 55%;
@@ -19,6 +31,7 @@
     background: #201c1c;
     padding: 7px;
     border: 2px solid #fff;
+    color:#fff;
 }
 .expence-item__date{
     width: 15%;
