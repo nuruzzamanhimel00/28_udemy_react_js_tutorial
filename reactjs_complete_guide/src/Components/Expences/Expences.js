@@ -1,7 +1,7 @@
 
 import './ExpenceItem.css'
 import ExpenceItem from './ExpenceItem.js'
-import Card from './Card.js'
+import Card from '../UI/Card.js'
 function Expences(){
     const expences = [
         {
