@@ -1,6 +1,6 @@
 import './ExpenceItem.css'
 
-function ExpenceDate(props){
+const ExpenceDate = (props) => {
     const month = props.date.toLocaleDateString('en-us',{ month: 'short'});
     const year = props.date.toLocaleDateString('en-us',{ year: 'numeric'});
     const day = props.date.toLocaleDateString('en-us',{ day: 'numeric'});

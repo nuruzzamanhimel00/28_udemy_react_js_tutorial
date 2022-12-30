@@ -1,6 +1,6 @@
 import Expence from './Components/Expences/Expences.js'
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
