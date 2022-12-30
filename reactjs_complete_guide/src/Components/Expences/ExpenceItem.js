@@ -1,10 +1,14 @@
+import React, { useState } from 'react';
 import './ExpenceItem.css'
 import ExpanceDate from './ExpenceDate.js'
 
 const ExpenceItem = (props) => {
 
+    let [title, setTItle] =  useState(props.title);
+
     const clickHandler = () =>{
-        console.log('clicked !!!!');
+        setTItle("Update title !!");
+        console.log(title);
     }
  
     return (
@@ -15,7 +19,7 @@ const ExpenceItem = (props) => {
                    
                 </div>
                 <div className='expence-item__description'>
-                    <h2>{props.title}</h2>
+                    <h2>{title}</h2>
                     <div>
                         <div className='expence-item__price'>${props.amount}</div>
                         <button onClick={ clickHandler } >Click</button>
