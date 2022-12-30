@@ -1,7 +1,11 @@
 import './ExpenceItem.css'
 import ExpanceDate from './ExpenceDate.js'
 
-function ExpenceItem(props){
+const ExpenceItem = (props) => {
+
+    const clickHandler = () =>{
+        console.log('clicked !!!!');
+    }
  
     return (
             <div className='expence-item'>
@@ -12,7 +16,11 @@ function ExpenceItem(props){
                 </div>
                 <div className='expence-item__description'>
                     <h2>{props.title}</h2>
-                    <div className='expence-item__price'>${props.amount}</div>
+                    <div>
+                        <div className='expence-item__price'>${props.amount}</div>
+                        <button onClick={ clickHandler } >Click</button>
+                    </div>
+                    
                 </div>
             </div>
         );
