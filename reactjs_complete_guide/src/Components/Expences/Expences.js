@@ -2,6 +2,8 @@
 import './ExpenceItem.css'
 import ExpenceItem from './ExpenceItem.js'
 import Card from '../UI/Card.js'
+import NewExpence from '../NewExpence/NewExpence.js'
+
 const Expences = () =>{
     const expences = [
         {
@@ -36,28 +38,30 @@ const Expences = () =>{
         },
       ];
     return (
-        <Card  className='expence_item_main'>
-        <ExpenceItem 
-        title={expences[0].title} 
-        amount={expences[0].amount}
-        date={expences[0].date}/>
+      <Card  className='expence_item_main'>
+      <NewExpence />
+      <ExpenceItem 
+      title={expences[0].title} 
+      amount={expences[0].amount}
+      date={expences[0].date}/>
+      
+      <ExpenceItem 
+      title={expences[1].title} 
+      amount={expences[1].amount}
+      date={expences[1].date}/>
+      
+      <ExpenceItem 
+      title={expences[2].title} 
+      amount={expences[2].amount}
+      date={expences[2].date}/>
+      
+      <ExpenceItem 
+      title={expences[3].title} 
+      amount={expences[3].amount}
+      date={expences[3].date}/>
+      
+    </Card>
         
-        <ExpenceItem 
-        title={expences[1].title} 
-        amount={expences[1].amount}
-        date={expences[1].date}/>
-        
-        <ExpenceItem 
-        title={expences[2].title} 
-        amount={expences[2].amount}
-        date={expences[2].date}/>
-        
-        <ExpenceItem 
-        title={expences[3].title} 
-        amount={expences[3].amount}
-        date={expences[3].date}/>
-        
-      </Card>
     );
 }
 
