@@ -6,9 +6,11 @@ const ExpenceItem = (props) => {
 
     let [title, setTItle] =  useState(props.title);
 
+    console.log('expence item executed !!');
+
     const clickHandler = () =>{
         setTItle("Update title !!");
-        console.log(title);
+        // console.log(title);
     }
  
     return (
