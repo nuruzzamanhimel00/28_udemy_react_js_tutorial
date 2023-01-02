@@ -13,26 +13,48 @@ const ExpenceForm = () =>{
     });
 
     const onTitleChangeHandler = (event) =>{
-        setUseInput({
-            ...useInput,
-            enterTitle: event.target.value
+        // setUseInput({
+        //     ...useInput,
+        //     enterTitle: event.target.value
+        // });
+        // or
+        setUseInput((prevState)=>{
+            return {
+                ...prevState,
+                enterTitle: event.target.value
+            }
         });
+
         // setEnterTitle(event.target.value);
         // console.log(event.target.value);
     }
 
     const onAmountChangeHandler = (event) =>{
-        setUseInput({
-            ...useInput,
-            enterAmount: event.target.value
+        // setUseInput({
+        //     ...useInput,
+        //     enterAmount: event.target.value
+        // });
+        //or
+        setUseInput((prevState)=>{
+            return {
+                ...prevState,
+                enterAmount: event.target.value
+            }
         });
         // setEnterAmount(event.target.value);
     }
 
     const onDateChangeHandler = (event) =>{
-        setUseInput({
-            ...useInput,
-            enterDate: event.target.value
+        // setUseInput({
+        //     ...useInput,
+        //     enterDate: event.target.value
+        // });
+        //or
+        setUseInput((prevState)=>{
+            return {
+                ...prevState,
+                enterDate: event.target.value
+            }
         });
         // setEnterDate(event.target.value);
     }
