@@ -1,10 +1,17 @@
+import React from 'react';
+
 const ExpenceForm = () =>{
+
+    const onTitleChangeHandler = (event) =>{
+        console.log(event.target.value);
+    }
+
     return (
         <div>
             <form className="row">
                 <div className="form-group col-md-6">
                     <label for="exampleInputEmail1">Title</label>
-                    <input type="email" className="form-control" aria-describedby="emailHelp" /> 
+                    <input type="email" onChange={onTitleChangeHandler} className="form-control" aria-describedby="emailHelp" /> 
                 </div>
                 <div className="form-group col-md-6">
                     <label for="amount">Amount</label>
