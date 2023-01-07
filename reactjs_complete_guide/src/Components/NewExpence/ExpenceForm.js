@@ -67,6 +67,11 @@ const ExpenceForm = () =>{
             amount:useInput.enterAmount,
             date: new Date(useInput.enterDate)
         };
+        setUseInput({
+            enterTitle : '',
+            enterAmount: '',
+            enterDate: ''
+        });
         console.log(expenceForm);
     }
 
@@ -74,16 +79,16 @@ const ExpenceForm = () =>{
         <div>
             <form className="row" onSubmit={onSubmitHandler} >
                 <div className="form-group col-md-6">
-                    <label for="exampleInputEmail1">Title</label>
-                    <input type="text" onChange={onTitleChangeHandler} className="form-control" aria-describedby="emailHelp" /> 
+                    <label >Title</label>
+                    <input type="text" value={useInput.enterTitle} onChange={onTitleChangeHandler} className="form-control" aria-describedby="emailHelp" /> 
                 </div>
                 <div className="form-group col-md-6">
-                    <label for="amount">Amount</label>
-                    <input type="number" onChange={onAmountChangeHandler} className="form-control" min='0.01' step="0.01" /> 
+                    <label >Amount</label>
+                    <input type="number" value={useInput.enterAmount} onChange={onAmountChangeHandler} className="form-control" min='0.01' step="0.01" /> 
                 </div>
                 <div className="form-group col-md-6">
-                    <label for="amount">Date</label>
-                    <input type="date" onChange={onDateChangeHandler} className="form-control" min='2022-12-31' max="2025-12-31" /> 
+                    <label >Date</label>
+                    <input type="date" value={useInput.enterDate} onChange={onDateChangeHandler} className="form-control" min='2022-12-31' max="2025-12-31" /> 
                     <button type="submit" className="btn btn-primary mt-3">Add Exponce</button>
                 </div>
                 
