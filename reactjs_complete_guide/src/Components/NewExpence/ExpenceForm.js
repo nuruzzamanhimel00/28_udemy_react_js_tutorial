@@ -59,12 +59,23 @@ const ExpenceForm = () =>{
         // setEnterDate(event.target.value);
     }
 
+    const onSubmitHandler = (event) =>{
+        event.preventDefault();
+        const expenceForm = {
+            id: Math.random() ,
+            title:useInput.enterTitle,
+            amount:useInput.enterAmount,
+            date: new Date(useInput.enterDate)
+        };
+        console.log(expenceForm);
+    }
+
     return (
         <div>
-            <form className="row">
+            <form className="row" onSubmit={onSubmitHandler} >
                 <div className="form-group col-md-6">
                     <label for="exampleInputEmail1">Title</label>
-                    <input type="email" onChange={onTitleChangeHandler} className="form-control" aria-describedby="emailHelp" /> 
+                    <input type="text" onChange={onTitleChangeHandler} className="form-control" aria-describedby="emailHelp" /> 
                 </div>
                 <div className="form-group col-md-6">
                     <label for="amount">Amount</label>
