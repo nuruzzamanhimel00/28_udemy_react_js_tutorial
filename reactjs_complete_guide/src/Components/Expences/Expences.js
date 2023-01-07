@@ -1,10 +1,12 @@
 
+// import React, { useState } from 'react';
 import './ExpenceItem.css'
 import ExpenceItem from './ExpenceItem.js'
 import Card from '../UI/Card.js'
 import NewExpence from '../NewExpence/NewExpence.js'
 
 const Expences = () =>{
+    
     const expences = [
         {
           id:1,
@@ -37,9 +39,16 @@ const Expences = () =>{
           date: new Date(2066, 11, 24)
         },
       ];
+      const saveExpenceDataHandler = (enterExpenceData)=>{
+        const expenceData = {
+            ...enterExpenceData,
+        };
+        expences.unshift(expenceData);
+        console.log('expenceData main',expenceData, expences);
+    }
     return (
       <Card  className='expence_item_main'>
-      <NewExpence />
+      <NewExpence onExpenceData={saveExpenceDataHandler} />
       <ExpenceItem 
       title={expences[0].title} 
       amount={expences[0].amount}
