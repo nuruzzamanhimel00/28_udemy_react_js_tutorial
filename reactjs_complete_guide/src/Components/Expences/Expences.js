@@ -1,9 +1,10 @@
 
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 import './ExpenceItem.css'
 import ExpenceItem from './ExpenceItem.js'
 import Card from '../UI/Card.js'
 import NewExpence from '../NewExpence/NewExpence.js'
+import ExpencesFilter from './ExpencesFilter.js'
 
 const Expences = () =>{
     
@@ -46,9 +47,19 @@ const Expences = () =>{
         expences.unshift(expenceData);
         console.log('expenceData main',expenceData, expences);
     }
+
+    const [ selectYear, setSelectYear ] = useState('2023');
+
+    const fiterChangeHandler = (selectYear) =>{
+      setSelectYear(selectYear);
+    }
+
     return (
       <Card  className='expence_item_main'>
       <NewExpence onExpenceData={saveExpenceDataHandler} />
+
+      <ExpencesFilter selectedYear={selectYear} onChangeFilter={fiterChangeHandler} />
+
       <ExpenceItem 
       title={expences[0].title} 
       amount={expences[0].amount}
