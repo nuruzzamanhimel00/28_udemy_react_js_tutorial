@@ -60,7 +60,11 @@ const Expences = () =>{
 
       <ExpencesFilter selectedYear={selectYear} onChangeFilter={fiterChangeHandler} />
 
-      <ExpenceItem 
+      { expences.map( (expence) => <ExpenceItem title={expence.title} amount={expence.amount} date={expence.date} /> ) }
+
+   
+
+      {/* <ExpenceItem 
       title={expences[0].title} 
       amount={expences[0].amount}
       date={expences[0].date}/>
@@ -78,7 +82,7 @@ const Expences = () =>{
       <ExpenceItem 
       title={expences[3].title} 
       amount={expences[3].amount}
-      date={expences[3].date}/>
+      date={expences[3].date}/> */}
       
     </Card>
         
