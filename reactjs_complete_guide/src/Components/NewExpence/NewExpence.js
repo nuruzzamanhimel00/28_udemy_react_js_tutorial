@@ -7,7 +7,6 @@ const NewExpence = (props) => {
     const saveExpenceDataHandler = (enterExpenceData)=>{
         const expenceData = {
             ...enterExpenceData,
-            id: Math.random()
         };
         props.onExpenceData(expenceData);
         // console.log('expenceData',expenceData);
