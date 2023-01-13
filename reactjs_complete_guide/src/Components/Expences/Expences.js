@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './ExpenceItem.css'
-import ExpenceItem from './ExpenceItem.js'
+import ExpencesList from './ExpencesList.js'
 import Card from '../UI/Card.js'
 import NewExpence from '../NewExpence/NewExpence.js'
 import ExpencesFilter from './ExpencesFilter.js'
@@ -71,48 +71,16 @@ const Expences = () => {
       .toString() === selectYear;
   });
 
-  let expenceContent = (<div className="card">
-    <div className="card-body">
-      <div className="no-data-found">
-      <h1 >No Expences Found</h1>
-      </div>
-    
-    </div>
-  </div>);
-  if(filterExpences.length > 0){
-    expenceContent = filterExpences.map((expence) => <ExpenceItem
-     key={expence.id}
-     title={expence.title}
-     amount={expence.amount}
-     date={expence.date}/>);
-  }
-
+  
   return (
     <Card className='expence_item_main'>
       <NewExpence onExpenceData={saveExpenceDataHandler}/>
 
       <ExpencesFilter selectedYear={selectYear} onChangeFilter={fiterChangeHandler}/> 
 
-      {expenceContent}
+      <ExpencesList items={filterExpences} />
 
-  
-      {/* //two way:-  */}
-      {/* {  filterExpences.length === 0 ? (<div className="card">
-          <div className="card-body">
-            <div className="no-data-found">
-            <h1 >No Expences Found</h1>
-            </div>
-          
-          </div>
-        </div> ) : 
-        (filterExpences.length > 0 &&
-          filterExpences.map((expence) => <ExpenceItem
-           key={expence.id}
-           title={expence.title}
-           amount={expence.amount}
-           date={expence.date}/>))  } */}
-
-      
+      {/* {expenceContent} */}
 
     </Card>
 
