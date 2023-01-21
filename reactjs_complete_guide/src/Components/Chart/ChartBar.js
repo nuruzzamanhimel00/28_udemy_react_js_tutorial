@@ -2,10 +2,10 @@ import React from 'react'
 
 const ChartBar = (props) =>{
 
-    let barFillheight = '0% !importent';
+    let barFillheight = '0%';
 
     if(props.maxValue > 0){
-        barFillheight = Math.round( (props.value / props.maxValue ) *100 )+'% !importent';
+        barFillheight = Math.round( (props.value / props.maxValue ) *100 )+'%';
     }
 
     return (

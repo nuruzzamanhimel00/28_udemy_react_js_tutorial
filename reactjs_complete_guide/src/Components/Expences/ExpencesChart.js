@@ -26,7 +26,7 @@ const ExpencesChart = (props) =>{
         // console.log(expence, expenceMonth);
     }
 
-    console.log('chartDataPoint=',chartDataPoint);
+    // console.log('chartDataPoint=',chartDataPoint);
 
     return (
         <Chart dataPoints={chartDataPoint} />

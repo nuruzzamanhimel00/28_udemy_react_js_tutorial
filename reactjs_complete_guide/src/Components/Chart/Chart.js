@@ -5,7 +5,9 @@ import ChartBar from './ChartBar.js'
 
 const Chart = (props) =>{
 
-    
+    const dataPointValue = props.dataPoints.map( dataPoint => dataPoint.value );
+    const totalMaximum = Math.max(...dataPointValue);
+    // console.log(dataPointValue, totalMaximum);
     return (
         <div className='chart'>
             {
@@ -14,25 +16,13 @@ const Chart = (props) =>{
                 <ChartBar
                     key={index}
                     value={dataPoint.value}
-                    maxValue={null}
+                    maxValue={totalMaximum}
                     label={dataPoint.label}
                  />)
 
             
                
             }
-              {/* <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar>
-              <ChartBar > </ChartBar> */}
         </div>
     );
 }
