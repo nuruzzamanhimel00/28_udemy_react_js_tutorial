@@ -15,7 +15,7 @@ const ExpencesFilter = (props) =>{
                     <div className='card'>
                         <div className='card-body row'>
                            <div className='col-md-6 offset-6'>
-                                <div class="form-group">
+                                <div className="form-group">
                                     <label >Filter By Year</label>
                                     <select value={props.selectedYear} onChange={dropDownChangeHandler}  className="form-control" >
                                         <option value="2018">2018</option>

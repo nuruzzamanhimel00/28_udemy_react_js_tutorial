@@ -5,18 +5,34 @@ import ChartBar from './ChartBar.js'
 
 const Chart = (props) =>{
 
+    
     return (
         <div className='chart'>
             {
-                props.dataPoints.map( (dataPoint) => 
+                props.dataPoints.map( (dataPoint, index) => 
                 
                 <ChartBar
-                    key={dataPoint.id}
+                    key={index}
                     value={dataPoint.value}
                     maxValue={null}
                     label={dataPoint.label}
                  />)
+
+            
+               
             }
+              {/* <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar>
+              <ChartBar > </ChartBar> */}
         </div>
     );
 }
