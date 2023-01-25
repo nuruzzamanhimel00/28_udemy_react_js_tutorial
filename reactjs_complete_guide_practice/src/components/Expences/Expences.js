@@ -4,6 +4,7 @@ import ExpencesList from './ExpencesList.js'
 import Card from '../UI/Card.js'
 import ExpenceFilter from './ExpenceFilter.js'
 import NewExpence from './NewExpence.js'
+import ExpenceChart from './ExpenceChart.js'
 
 const DUMMY_EXPENCES = [
   {
@@ -34,8 +35,20 @@ const DUMMY_EXPENCES = [
   }, {
     id: 6,
     title: '7th title',
-    amount: 600,
+    amount: 800,
     date: new Date(2023, 2, 24)
+  }
+  , {
+    id: 7,
+    title: '7th title',
+    amount: 400,
+    date: new Date(2023, 2, 24)
+  }
+  , {
+    id: 8,
+    title: '7th title',
+    amount: 400,
+    date: new Date(2023, 1, 24)
   }
 ];
 
@@ -67,7 +80,11 @@ const Expences = () =>{
           
           <NewExpence onExpenceFormData={ExpenceFormDataHandler} />
 
+     
+
           <ExpenceFilter selectYear={selectYear} onChangeSelectFilter={ChangeSelectFilterHandler} />
+
+          <ExpenceChart expences={filterExpence} />
 
           <ExpencesList items={filterExpence} />
          
