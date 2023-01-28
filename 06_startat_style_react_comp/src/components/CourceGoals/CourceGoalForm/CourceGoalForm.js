@@ -8,7 +8,7 @@ const CourceGoalForm = (props) =>{
 
     const changeCourseInputHandler = (e) =>{
         e.preventDefault();
-        if(coursInput.trim().length > 0){
+        if(coursInput.trim().length >= 0){
             setIsinValid(false);
         }
         setCourseInput(e.target.value);
@@ -27,7 +27,7 @@ const CourceGoalForm = (props) =>{
 
     return (
         <div className="card">
-            <div className="card-body">
+            <div className={`card-body ${isinValid ? 'invalide' : ''} `}>
                 <form onSubmit={formSubmitHandler}>
                     <div className="mb-3">
                         <label className="form-label">
