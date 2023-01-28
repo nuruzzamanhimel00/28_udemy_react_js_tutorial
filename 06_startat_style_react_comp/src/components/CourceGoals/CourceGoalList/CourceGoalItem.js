@@ -1,10 +1,15 @@
 import React from "react";
 import "./CourceGoalItem.css";
 
-const CourceGoalItem = () => {
+const CourceGoalItem = (props) => {
+
+    const listDeleteHandler = () =>{
+        props.onGetDeleteId(props.id);
+        // console.log(props.id);
+    }
 
     return (
-        <li className="goal-item">goal ite</li>
+        <li onClick={listDeleteHandler} className="goal-item">{props.text}</li>
     );
 }
 
