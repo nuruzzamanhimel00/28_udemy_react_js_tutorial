@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./CourceGoalForm.css"
+import Button from './Button.js'
 
 const CourceGoalForm = (props) =>{
 
@@ -40,7 +41,7 @@ const CourceGoalForm = (props) =>{
                             } 
                             } type="text" value={coursInput} onChange={changeCourseInputHandler} className="form-control" />
                     </div>
-                    <button type="submit" className="button">Add Goal</button>
+                        <Button  children={'Add Goals'} />
                 </form>
             </div>
         </div>
