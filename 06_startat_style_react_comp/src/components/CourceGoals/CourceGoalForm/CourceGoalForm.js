@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import "./CourceGoalForm.css"
 import Button from './Button.js'
+import styled from 'styled-components'
+
 
 const CourceGoalForm = (props) =>{
 
@@ -26,11 +28,26 @@ const CourceGoalForm = (props) =>{
         setCourseInput('');
     }
 
+    const FormControl = styled.div`
+      & input:focus {
+            outline-color: initial;
+            background-image: initial;
+            background-color: rgb(74, 8, 52) !important;
+            border-color: rgb(213, 0, 143) !important;
+        }
+        & input{
+            color:#fff !important;
+        }
+    `;
+
+   
+
     return (
-        <div className="card">
-            <div className={`card-body ${isinValid ? 'invalide' : ''} `}>
+        <div className="card form_card">
+            <div  className={`card-body ${isinValid ? 'invalide' : ''} `}>
+            {/* <cardBody className={`card-body ${isinValid ? 'invalide' : ''} `}> */}
                 <form onSubmit={formSubmitHandler}>
-                    <div className="mb-3">
+                    <FormControl className="mb-3">
                         <label className="form-label">
                         <b style={ {color: isinValid ? 'red' : 'black' } }>Cource Goal</b>
                         </label>
@@ -40,7 +57,7 @@ const CourceGoalForm = (props) =>{
                                 background: isinValid ? 'red' : ''  
                             } 
                             } type="text" value={coursInput} onChange={changeCourseInputHandler} className="form-control" />
-                    </div>
+                    </FormControl>
                         <Button  children={'Add Goals'} />
                 </form>
             </div>
