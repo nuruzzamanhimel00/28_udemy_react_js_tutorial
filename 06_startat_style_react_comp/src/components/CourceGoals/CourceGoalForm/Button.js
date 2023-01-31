@@ -3,7 +3,8 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
- 
+
+    width:auto;
     border-color: rgb(213, 0, 143);
     color: rgb(232, 230, 227);
     background-image: initial;
@@ -13,6 +14,10 @@ const Button = styled.button`
       border: 1px solid #8b005d;
       background: #8b005d;
       cursor: pointer;
+    
+      @media(max-width:768px){
+        width:100%;
+      }
   
   &:hover{
     background: #008b2a;
