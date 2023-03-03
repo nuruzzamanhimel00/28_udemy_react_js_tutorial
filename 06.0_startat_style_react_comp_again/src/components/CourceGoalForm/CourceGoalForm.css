@@ -7,3 +7,10 @@ input:focus {
 input{
     color:#fff !important;
 }
+.card-body.invalied{
+    border: 1px solid red !important;
+}
+.card-body.invalied button.button{
+    background: red;
+    border: 1px solid red !important;
+}

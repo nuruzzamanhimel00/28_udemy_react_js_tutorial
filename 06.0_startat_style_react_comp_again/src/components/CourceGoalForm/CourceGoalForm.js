@@ -28,12 +28,7 @@ const CourceGoalForm = (props) => {
 
     return (
         <div className="card">
-        <div className="card-body"
-        style={
-            {
-                border: !isValid ? '1px solid red' : ''
-            }
-        }
+        <div className={`card-body ${!isValid ? 'invalied' : ''} `}
         >
             <form onSubmit={courseGlobalSubmitHandler} >
                 <div className="mb-3">
