@@ -1,0 +1,16 @@
+input:focus {
+    outline-color: initial;
+    background-image: initial;
+    background-color: rgb(74, 8, 52) !important;
+    border-color: rgb(213, 0, 143) !important;
+}
+input{
+    color:#fff !important;
+}
+.card-body.invalied{
+    border: 1px solid red !important;
+}
+.card-body.invalied button.button{
+    background: red;
+    border: 1px solid red !important;
+}
