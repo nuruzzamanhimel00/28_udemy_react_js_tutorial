@@ -1,9 +1,14 @@
 import React from "react";
 import './CourceGoalItem.css'
 
-const CourceGoalItem = () => {
+const CourceGoalItem = (props) => {
+
+    const courseDeleteHandler = () =>{
+        props.onGetDeleteCourseId(props.id);
+    }
+
     return (
-        <li  className="goal-item">Course item number one</li>
+        <li onClick={courseDeleteHandler} className="goal-item">{props.message}</li>
     );
 }
 

@@ -14,6 +14,7 @@ const CourceGoalForm = (props) => {
         e.preventDefault();
         
         if(courseInput.trim().length > 0){
+            setCourseInput('');
             props.onFormDataStore(courseInput);
         }
     }
@@ -26,7 +27,7 @@ const CourceGoalForm = (props) => {
                     <label className="form-label">
                     <b >Cource Goal</b>
                     </label>
-                    <input onChange={courseInputHandler} type="text"  className="form-control" />
+                    <input onChange={courseInputHandler} type="text" value={courseInput}  className="form-control" />
                 </div>
                 <button type="submit" className="button">Add Goal</button>
             </form>
