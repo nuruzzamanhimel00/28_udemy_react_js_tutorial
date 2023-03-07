@@ -32,12 +32,7 @@ const App = ()=> {
   const getDeleteIdHandler = (dltId) =>{
     let courseGoalItem = courseGoals.filter( (item) => item.id !== dltId );
     setCourseGoals(courseGoalItem);
-    // console.log(courseGoalItem);
-    // if(index > -1){
-    //   var courseGoalItem = courseGoals.splice(index,1);
-    //   setCourseGoals(courseGoalItem);
-    // }
-    // console.log(index);
+ 
     
   }
 
