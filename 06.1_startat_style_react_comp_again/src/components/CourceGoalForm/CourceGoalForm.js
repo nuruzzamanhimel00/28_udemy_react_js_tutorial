@@ -1,6 +1,7 @@
 
 import React, {useState} from 'react'
 import './CourceGoalForm.css'
+import Button from '../UI/Button.js'
 
 const CourceGoalForm = (props) => {
     const [courseInput, setCourseInput] = useState('');
@@ -50,7 +51,8 @@ const CourceGoalForm = (props) => {
                     }
                     onChange={courseInputHandler} type="text" value={courseInput}  className="form-control" />
                 </div>
-                <button type="submit" className="button">Add Goal</button>
+                <Button type="submit" text="Add Goal" />
+                {/* <button type="submit" className="button">Add Goal</button> */}
             </form>
         </div>
     </div>
