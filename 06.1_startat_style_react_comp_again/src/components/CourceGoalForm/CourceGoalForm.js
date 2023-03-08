@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 import './CourceGoalForm.css'
 import Button from '../UI/Button.js'
 
+import { CardBody } from '../Styled/Common.style.js'
+
 const CourceGoalForm = (props) => {
     const [courseInput, setCourseInput] = useState('');
     const [isValid, setIsValid] = useState(true);
@@ -27,37 +29,42 @@ const CourceGoalForm = (props) => {
         }
     }
 
+    
+
     return (
         <div className="card">
-        <div className={`card-body ${!isValid ? 'invalied' : ''} `}
-        >
-            <form onSubmit={courseGlobalSubmitHandler} >
-                <div className="mb-3">
-                    <label className="form-label">
-                    <b 
-                    style={
-                        {
-                            color: isValid ? '#000' : "red"
+            <CardBody isValid={isValid}>
+            {/* <CardBody className={`${!isValid ? 'invalied' : ''}`}> */}
+
+            {/* <div className={`card-body ${!isValid ? 'invalied' : ''} `}> */}
+                <form onSubmit={courseGlobalSubmitHandler} >
+                    <div className="mb-3">
+                        <label className="form-label">
+                        <b 
+                        style={
+                            {
+                                color: isValid ? '#000' : "red"
+                            }
+                        } 
+                        >Cource Goal</b>
+                        </label>
+                        <input
+                        style={
+                            {
+                                borderColor: !isValid ? 'red' : '',
+                                backgroundColor: !isValid ? 'red' : ''
+                            }
                         }
-                    } 
-                    >Cource Goal</b>
-                    </label>
-                    <input
-                    style={
-                        {
-                            borderColor: !isValid ? 'red' : '',
-                            backgroundColor: !isValid ? 'red' : ''
-                        }
-                    }
-                    onChange={courseInputHandler} type="text" value={courseInput}  className="form-control" />
-                </div>
-                <Button type={'submit'} name={`this is button`} title={`Submit Button`}  children={'Add Goals'} />
-                    
-                    
-                {/* <button type="submit" className="button">Add Goal</button> */}
-            </form>
+                        onChange={courseInputHandler} type="text" value={courseInput}  className="form-control" />
+                    </div>
+                    <Button  type={'submit'} name={`this is button`} title={`Submit Button`}  children={'Add Goals'} />
+                        
+                        
+                    {/* <button type="submit" className="button">Add Goal</button> */}
+                </form>
+            </CardBody>
+            {/* </div> */}
         </div>
-    </div>
     );
 }
 
