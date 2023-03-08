@@ -14,6 +14,10 @@ const Button = styled.button`
     background: #8b005d;
     width: auto;
 
+    @media(max-width: 768px){
+        width: 100%;
+    }
+
     &:hover{
         background: rgb(213, 0, 143);
     }
