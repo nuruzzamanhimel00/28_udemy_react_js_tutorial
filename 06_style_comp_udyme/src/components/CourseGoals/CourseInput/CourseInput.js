@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-// import Button from '../../UI/Button/Button';
-import { Button } from '../../Style/Button.style';
+import Button from '../../UI/Button/Button';
+// import { Button } from '../../Style/Button.style';
 // import './CourseInput.css';
 import {FormControl} from '../../Style/Common.style'
 
