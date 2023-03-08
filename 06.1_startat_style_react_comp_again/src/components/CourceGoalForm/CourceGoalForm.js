@@ -51,7 +51,9 @@ const CourceGoalForm = (props) => {
                     }
                     onChange={courseInputHandler} type="text" value={courseInput}  className="form-control" />
                 </div>
-                <Button type="submit" text="Add Goal" />
+                <Button type={'submit'} name={`this is button`} title={`Submit Button`}  children={'Add Goals'} />
+                    
+                    
                 {/* <button type="submit" className="button">Add Goal</button> */}
             </form>
         </div>

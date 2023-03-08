@@ -9,3 +9,9 @@
     background: #8b005d;
     width: auto;
 }
+.button:hover{
+    background: rgb(213, 0, 143);
+}
+.button:focus{
+    background: rgb(0, 213, 96);
+}
