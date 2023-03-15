@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import Button from '../../UI/Button/Button';
-import './CourseInput.css';
+// import './CourseInput.css';
+import {FormControl} from '../../style/Common.style.js'
 
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -24,7 +25,9 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <div className={`form-control ${!isValide ? 'invalid' : '' } `}>
+      <FormControl isValide={isValide} >
+      {/* <FormControl className={`${!isValide ? 'invalid' : '' }`}> */}
+      {/* <div className={`form-control ${!isValide ? 'invalid' : '' } `}> */}
         <label 
           style={
             {
@@ -39,8 +42,9 @@ const CourseInput = props => {
             }
           }
         />
-      </div>
-      <Button type="submit">Add Goal</Button>
+      </FormControl>
+      <Button type="submit" title={`This is submit button`} children={`Add Goals`}
+      ></Button>
     </form>
   );
 };
