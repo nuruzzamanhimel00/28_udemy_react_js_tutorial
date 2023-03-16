@@ -36,7 +36,7 @@ const CourseInput = props => {
             }
           }
         >Course Goal</label>
-        <input type="text" onChange={goalInputChangeHandler}
+        <input type="text" value={enteredValue} onChange={goalInputChangeHandler}
           style={
             {
               background: !isValide ? 'red' : ''
