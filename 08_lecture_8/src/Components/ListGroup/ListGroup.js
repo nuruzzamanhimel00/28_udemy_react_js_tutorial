@@ -1,4 +1,5 @@
 import React from "react";
+import ListItem from '../ListItem/ListItem.js'
 
 const ListGroup = () =>{
     return (
@@ -7,10 +8,12 @@ const ListGroup = () =>{
             <div className='card'>
                   <div className='card-body'>
                     <ul className="list-group">
-                      <li className="list-group-item my-1">An item</li>
-                      <li className="list-group-item my-1">A second item</li>
-                      <li className="list-group-item my-1">A third item</li>
-                      <li className="list-group-item my-1">A fourth item</li>
+                      
+                      <ListItem />
+                      <ListItem />
+                      <ListItem />
+                      <ListItem />
+                     
             
                     </ul>
                 </div>
