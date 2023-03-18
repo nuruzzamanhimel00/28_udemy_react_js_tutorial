@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './App.css'
+// import './App.css'
 import FormSection from './Components/FormSection/FormSection.js'
 import ListGroup from './Components/ListGroup/ListGroup.js'
 
+import {MainSection, MainSectionInner, ListSection} from './Style/Common.style.js'
+import Card from './Components/Ui/Card/Card.js'
 
 function App() {
 
@@ -24,17 +26,20 @@ function App() {
 
   if(listData.length > 0){
     content = (
-      <div className='list-section mt-4'>
-            <div className='card'>
+      
+      <ListSection className='mt-4'> 
+      {/* <ListSection className='list-section mt-4'>  */}
+            <Card className={`card`}>
+            {/* <div className='card'> */}
                   <div className='card-body'>
                   <ListGroup 
                   listData={listData} 
                   onGetListGroupId={getListGroupIdHandler}
                   />
                 </div>
-              </div>
+              </Card>
             
-          </div>
+          </ListSection>
     ) ;
   }
 
@@ -51,13 +56,14 @@ function App() {
   return (
     <div>
    
-      <div className='main-section'>
-        <div className='main-section-inner'>
+      {/* <div className='main-section'> */}
+      <MainSection>
+        <MainSectionInner>
          <FormSection onSetListInput={setListInputHandler} />
           {content}
           
-        </div>
-      </div>
+        </MainSectionInner>
+      </MainSection>
     </div>
   );
 }

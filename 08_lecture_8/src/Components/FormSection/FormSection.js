@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import Button from '../Ui/Button/Button.js'
 import InvalidPopup from '../PopupModal/InvalidPopup/InvalidPopup.js'
+import Card from '../Ui/Card/Card.js'
 
 const FormSection = (props) =>{
     const [inputData, setInputData] = useState({
@@ -112,23 +113,24 @@ const FormSection = (props) =>{
         <>
         <InvalidPopup validate={validate} onValidaitonReset={validaitonResetHandler} />
         <div className='form-section'>
-            <div className='card'>
+
+            <Card className={`card`}>
                 <div className='card-body'>
                     <form onSubmit={formSubmitHandler}>
                     <div className="form-group">
-                        <label >Name</label>
-                        <input type="text" value={inputData.name} onChange={nameChangeHandler} className="form-control"/>
+                        <label htmlFor="nameInput" >Name</label>
+                        <input type="text" value={inputData.name} onChange={nameChangeHandler} className="form-control" id="nameInput"/>
                     
                     </div>
                     <div className="form-group">
-                        <label >age</label>
-                        <input type="number" value={inputData.age} onChange={ageChangeHandler} className="form-control" />
+                        <label htmlFor="inputAge" >age</label>
+                        <input type="number" value={inputData.age} onChange={ageChangeHandler} className="form-control" id="inputAge" />
                     </div>
                     
-                    <Button />
+                    <Button className="btn btn-primary"  type="submit" children={`submit`} title="Click here for submit" />
                     </form>
                 </div>
-            </div>
+            </Card>
         </div>
         </>
     );

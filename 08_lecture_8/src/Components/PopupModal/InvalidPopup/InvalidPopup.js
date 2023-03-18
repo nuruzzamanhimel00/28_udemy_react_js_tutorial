@@ -1,5 +1,5 @@
 import React from "react";
-import './InvalidPopup.css'
+import styles from './InvalidPopup.module.css'
 
 const InvalidPopup = (props) =>{
 
@@ -23,11 +23,13 @@ const InvalidPopup = (props) =>{
     return (
         <>
             {/* <div  className="overlay open"> */}
-            <div  className={`overlay ${modalOpenClass} `}>
-                <div className="popup">
+            <div  className={`${styles.overlay} ${modalOpenClass === 'open' ? styles.open : ''} `}>
+            {/* <div  className={`overlay ${modalOpenClass} `}> */}
+                <div className={`${styles.popup}`}>
+                
                     <h2>Invalid Input</h2>
-                    <a href="test" className="close" onClick={closeModalHandler} >&times;</a>
-                    <div className="content">
+                    <a href="test" className={`${styles.close}`} onClick={closeModalHandler} >&times;</a>
+                    <div className={`${styles.content}`}>
                        {invalidMessage}
                     </div>
                 </div>
