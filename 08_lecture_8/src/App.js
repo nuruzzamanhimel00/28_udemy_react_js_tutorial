@@ -8,6 +8,16 @@ function App() {
 
   const [listData, setListData] = useState([]);
 
+  const getListGroupIdHandler = (id) =>{
+    let latestListData = listData.filter( (list)=>list.id != id );
+    setListData((prevData) =>{
+      return [
+        ...latestListData
+      ]
+    });
+    console.log("id",id);
+  }
+
   let content = (  <div className='no-data-found text-center  mt-4'>
       <h3>No Data found...</h3>
     </div>);
@@ -17,7 +27,10 @@ function App() {
       <div className='list-section mt-4'>
             <div className='card'>
                   <div className='card-body'>
-                  <ListGroup listData={listData} />
+                  <ListGroup 
+                  listData={listData} 
+                  onGetListGroupId={getListGroupIdHandler}
+                  />
                 </div>
               </div>
             
@@ -32,7 +45,7 @@ function App() {
       data
      ]
     });
-    console.log(data);
+    // console.log(data);
   }
   
   return (
@@ -41,11 +54,8 @@ function App() {
       <div className='main-section'>
         <div className='main-section-inner'>
          <FormSection onSetListInput={setListInputHandler} />
-
-        {content}
+          {content}
           
-
-  
         </div>
       </div>
     </div>
