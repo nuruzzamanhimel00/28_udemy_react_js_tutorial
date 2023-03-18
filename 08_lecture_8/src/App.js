@@ -9,13 +9,13 @@ function App() {
   const [listData, setListData] = useState([]);
 
   const getListGroupIdHandler = (id) =>{
-    let latestListData = listData.filter( (list)=>list.id != id );
+    let latestListData = listData.filter( (list)=>list.id !== id );
     setListData((prevData) =>{
       return [
         ...latestListData
       ]
     });
-    console.log("id",id);
+    // console.log("id",id);
   }
 
   let content = (  <div className='no-data-found text-center  mt-4'>
