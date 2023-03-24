@@ -6,6 +6,8 @@ import ListGroup from './Components/ListGroup/ListGroup.js'
 import {MainSection, MainSectionInner, ListSection} from './Style/Common.style.js'
 import Card from './Components/Ui/Card/Card.js'
 
+import Wrapper from './Components/Helpers/Wrapper.js';
+
 function App() {
 
   const [listData, setListData] = useState([]);
@@ -54,7 +56,7 @@ function App() {
   }
   
   return (
-    <div>
+    <Wrapper>
    
       {/* <div className='main-section'> */}
       <MainSection>
@@ -64,7 +66,7 @@ function App() {
           
         </MainSectionInner>
       </MainSection>
-    </div>
+    </Wrapper>
   );
 }
 
