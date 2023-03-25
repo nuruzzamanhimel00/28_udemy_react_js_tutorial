@@ -1,0 +1,60 @@
+.expence-item{
+    overflow: hidden;
+    background: #ddd;
+    padding: 5px;
+    border: 1px solie #ddd;
+    border-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: 4px 0;
+
+}
+.expence_item_main{
+    width: 70%;
+    margin: 0 auto;
+    /* position: absolute;
+    top: 54%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%); */
+    /* background: #000;
+    padding: 11px 10px;
+    border-radius: 7px; */
+}
+.expence-item__date__item{
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    background: #201c1c;
+    padding: 7px;
+    border: 2px solid #fff;
+    color:#fff;
+}
+.expence-item__date{
+    width: 15%;
+    float: left;
+    font-weight: bold;
+}
+.expence-item__description{
+    width: 83%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.expence-item__description h2{
+    
+    margin: 0;
+}
+.expence-item__price{
+    background: #5914d3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    border: 3px solid #fff;
+    font-weight: bold;
+    font-size: 20px;
+}

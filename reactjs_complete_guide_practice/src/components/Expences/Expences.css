@@ -1,0 +1,56 @@
+.card.expence_item_main{
+    width: 60%;
+    margin: 0 auto;
+    background: rgb(10, 164, 184);
+}
+.expence-item__date {
+    width: 15%;
+    float: left;
+    font-weight: bold;
+}
+.expence-item__description {
+    width: 83%;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.expence-item {
+    background-image: initial;
+    background-color: rgb(43, 47, 49) !important;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+.expence-item__date__item {
+    background-image: initial;
+    background-color: rgb(23, 24, 25);
+    border-color: rgb(48, 52, 54);
+    color: rgb(232, 230, 227);
+}
+.expence-item__date__item {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    background: #201c1c;
+    padding: 7px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.expence-item__price {
+    background-image: initial;
+    background-color: rgb(71, 16, 169);
+    color: rgb(232, 230, 227);
+    border-color: rgb(48, 52, 54);
+}
+.expence-item__price {
+    background: #5914d3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    border: 3px solid #fff;
+    font-weight: bold;
+    font-size: 20px;
+}

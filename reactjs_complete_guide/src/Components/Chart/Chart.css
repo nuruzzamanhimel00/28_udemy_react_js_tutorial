@@ -1,0 +1,24 @@
+.chart{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+
+.chart-bar .chart-bar__inner{
+    height: 120px;
+    margin: 4px auto;
+    border-radius: 5px;
+    border: 1px;
+    background: #fff;
+    
+}
+.chart-bar .chart-bar__inner .chart-bar__fill{
+    background: #5c0ed2;
+}
+
+.chart-bar__inner{
+    display: flex;
+    flex-flow: column-reverse;
+}

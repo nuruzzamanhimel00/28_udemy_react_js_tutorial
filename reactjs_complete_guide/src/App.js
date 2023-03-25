@@ -1,12 +1,11 @@
+import Expence from './Components/Expences/Expences.js'
 
+const App = () => {
 
-import ExpenceItem from './Components/ExpenceItem.js'
-
-function App() {
   return (
     <div className="App">
       <h1>Lets Start</h1>
-      <ExpenceItem></ExpenceItem>
+      <Expence />
     </div>
   );
 }
