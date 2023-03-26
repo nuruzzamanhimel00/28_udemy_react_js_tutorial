@@ -6,16 +6,16 @@ import MainHeader from './components/MainHeader/MainHeader';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  console.log('before useEffect');
+  // console.log('before useEffect');
   useEffect(()=>{
-    console.log('useEffect');
+    // console.log('useEffect');
     const localStorageUserLoggedinInfo = parseInt(localStorage.getItem('userLoggedin'));
     if(localStorageUserLoggedinInfo === 1){
       // console.log('localStorageUserLoggedinInfo',localStorageUserLoggedinInfo);
       setIsLoggedIn(true);
     }
   },[]);
-  console.log('after useEffect');
+  // console.log('after useEffect');
 
   const loginHandler = (email, password) => {
     // We should of course check email and password
