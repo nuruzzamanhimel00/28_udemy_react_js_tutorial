@@ -10,6 +10,13 @@ const Login = (props) => {
   const [enteredPassword, setEnteredPassword] = useState('');
   const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+    // console.log('Before Runngin!!');
+    useEffect(()=>{
+      console.log('Running !!');
+      return ()=>{
+        console.log("CLEAN UP RUNNING !!");
+      }
+    },[enteredPassword]);
 
   useEffect(()=>{
    
@@ -22,7 +29,7 @@ const Login = (props) => {
 
     //cleanup funtion
     return ()=>{
-      console.log('clean up');
+      // console.log('clean up');
       clearTimeout(identifier);
     }
 
