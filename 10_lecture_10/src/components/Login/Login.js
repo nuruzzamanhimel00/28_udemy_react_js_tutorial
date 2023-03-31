@@ -41,22 +41,22 @@ const Login = (props) => {
       }
     },[passwordState]);
 
-  // useEffect(()=>{
+  useEffect(()=>{
    
-  //   const identifier = setTimeout(() => {
-  //     console.log('checking for validity!!')
-  //     setFormIsValid(
-  //       enteredEmail.includes('@') && enteredPassword.trim().length > 6
-  //     );
-  //   }, 1000);
+    const identifier = setTimeout(() => {
+      console.log('checking for validity!!')
+      setFormIsValid(
+        emailState.value.includes('@') && passwordState.value.trim().length > 6
+      );
+    }, 1000);
 
-  //   //cleanup funtion
-  //   return ()=>{
-  //     // console.log('clean up');
-  //     clearTimeout(identifier);
-  //   }
+    //cleanup funtion
+    return ()=>{
+      // console.log('clean up');
+      clearTimeout(identifier);
+    }
 
-  // },[enteredEmail,enteredPassword])
+  },[emailState,passwordState])
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:"USER_INPUT", val:event.target.value});
