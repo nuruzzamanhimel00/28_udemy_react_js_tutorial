@@ -33,11 +33,15 @@ const Login = (props) => {
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {value:'', isValide:undefined})
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, {value:'', isValide:undefined})
+
+  const {isValide : emailIsValide} = emailState
+  const {isValide : passwordIsValide} = passwordState
+
     // console.log('Before Runngin!!');
     useEffect(()=>{
-      console.log('Running !!');
+      // console.log('Running !!');
       return ()=>{
-        console.log("CLEAN UP RUNNING !!");
+        // console.log("CLEAN UP RUNNING !!");
       }
     },[passwordState]);
 
@@ -46,33 +50,36 @@ const Login = (props) => {
     const identifier = setTimeout(() => {
       console.log('checking for validity!!')
       setFormIsValid(
-        emailState.value.includes('@') && passwordState.value.trim().length > 6
+        emailIsValide && passwordIsValide
       );
+      // setFormIsValid(
+      //   emailState.value.includes('@') && passwordState.value.trim().length > 6
+      // );
     }, 1000);
 
     //cleanup funtion
     return ()=>{
-      // console.log('clean up');
+      console.log('clean up');
       clearTimeout(identifier);
     }
 
-  },[emailState,passwordState])
+  },[emailIsValide,passwordIsValide])
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:"USER_INPUT", val:event.target.value});
     // setEnteredEmail(event.target.value);
     // console.log("emailChangeHandler=",event.target.value.includes('@') && enteredPassword.trim().length > 6);
-    setFormIsValid(
-      event.target.value.includes('@') && passwordState.value.trim().length > 6
-    );
+    // setFormIsValid(
+    //   event.target.value.includes('@') && passwordState.value.trim().length > 6
+    // );
   };
 
   const passwordChangeHandler = (event) => {
     // setEnteredPassword(event.target.value);
     dispatchPassword({type:'USER_INPUT', val: event.target.value });
-    setFormIsValid(
-      event.target.value.trim().length > 6 && emailState.isValide
-    );
+    // setFormIsValid(
+    //   event.target.value.trim().length > 6 && emailState.isValide
+    // );
     // setFormIsValid(
     //   event.target.value.trim().length > 6 && enteredEmail.includes('@')
     // );
