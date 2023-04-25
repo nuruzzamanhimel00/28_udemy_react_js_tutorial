@@ -37,6 +37,9 @@ const Login = (props) => {
   const [emailState, dispatchEmail] = useReducer(emailReducer, {value:'', isValide:undefined})
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, {value:'', isValide:undefined})
     // console.log('Before Runngin!!');
+
+  const {isValide: emailIsValid } = emailState
+  const {isValide: passwordIsValid} = passwordState
     useEffect(()=>{
       console.log('Running !!');
       return ()=>{
@@ -59,7 +62,7 @@ const Login = (props) => {
       clearTimeout(identifier);
     }
 
-  },[emailState,passwordState])
+  },[emailIsValid, passwordIsValid])
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type:"USER_INPUT", val:event.target.value});
