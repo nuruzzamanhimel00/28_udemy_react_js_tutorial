@@ -3,12 +3,12 @@ import SrtImg from '../../assets/meal.jpg'
 import classes from './Header.module.css'
 import HeaderCartButton from './HeaderCartButton.js'
 
-const Header = () => {
+const Header = (props) => {
     return (
         <>
             <header className={classes.header}>
                 <h1>RealMeal</h1>
-                <HeaderCartButton />
+                <HeaderCartButton onClickBtn={props.onCartClick} />
             </header>
             <div className={classes['main-image']}>
                 <img src={SrtImg}  alt='The table is full of meals' />
